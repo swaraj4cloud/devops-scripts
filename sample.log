@@ -1,0 +1,6 @@
+INFO: Server started successfully
+INFO: User login successful
+WARNING: Disk space at 80%
+ERROR: Failed to connect to database
+INFO: Health check passed
+ERROR: Timeout while waiting for response
