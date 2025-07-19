@@ -2,13 +2,15 @@ name: Script Checker
 on: [push]
 
 jobs:
-     run-scripts:
-        runs-on: ubuntu latest
-        steps:
+  run-scripts:
+    runs-on: ubuntu-latest
+    steps:
 
-        - name: Checkout Code
-          uses: actions/checkout@v3
-        - name: Run Python Memory Check
-           run: python3 mem_check.py
-        - name: Run Log Parser
-           run: python3 log_parser.py sample.log || echo "Skipping if no sample.log"
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Python Memory Check
+        run: python3 mem_check.py
+ 
+      - name: Run Log Parser
+        run: python3 log_parser.py sample.log || echo "Skipping if no sample.log"
